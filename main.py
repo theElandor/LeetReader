@@ -1,6 +1,6 @@
 from tree import Tree
-from functions import flipEquiv
 from utils import read_nodes
+from functions import flipEquiv
 import os
 
 nodes = [read_nodes("t1.txt"), read_nodes("t2.txt")]
