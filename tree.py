@@ -28,7 +28,7 @@ class Tree:
             q.append(lnode)
             q.append(rnode)
             i+=2
-    def print_tree(self):
+    def print_tree(self, filename):
         root = self.root
         dot = graphviz.Digraph()
         dot.node(str(root.val))
@@ -43,7 +43,7 @@ class Tree:
                 dot.edge(str(node.val), str(node.right.val))
                 add_nodes_edges(node.right)
         add_nodes_edges(root)
-        dot.render('binary_tree', view=True, format='png')
+        dot.render(filename, view=False, format='png')
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
