@@ -17,6 +17,8 @@ class Tree:
         i = 1
         while i != n:
             current = q.popleft()
+            while not current:
+                current = q.popleft()
             left = nodes[i]
             right = nodes[i+1]
             lnode = TreeNode(left) if left else None
